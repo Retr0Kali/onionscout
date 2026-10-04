@@ -190,6 +190,10 @@ connection.
 - [ ] Export IOCs to STIX / MISP
 - [ ] Scheduled re-scans with change diffing
 
+## 👤 Author
+
+Built and maintained by **Retr0** ([@Retr0Kali](https://github.com/Retr0Kali)).
+
 ## 📄 License
 
 [MIT](LICENSE). Use responsibly.
