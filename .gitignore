@@ -1,0 +1,34 @@
+# Secrets & local config
+.env
+*.sqlite
+*.sqlite-journal
+.onionscout_cache.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Investigation output
+out/
+reports/
+*.report.json

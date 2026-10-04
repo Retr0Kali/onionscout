@@ -1,0 +1,39 @@
+<svg width="560" height="180" viewBox="0 0 560 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OnionScout logo">
+  <defs>
+    <linearGradient id="onion" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b57bff"/>
+      <stop offset="1" stop-color="#7a2ff5"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c8a2ff"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#2a1245"/>
+      <stop offset="1" stop-color="#140a22"/>
+    </radialGradient>
+  </defs>
+
+  <!-- badge backdrop -->
+  <circle cx="90" cy="90" r="66" fill="url(#glow)" stroke="#3a2060" stroke-width="2"/>
+
+  <!-- onion bulb (concentric layers) -->
+  <g transform="translate(90 96)">
+    <path d="M0 -44 C 30 -44 42 -16 42 6 C 42 34 22 50 0 50 C -22 50 -42 34 -42 6 C -42 -16 -30 -44 0 -44 Z" fill="url(#onion)"/>
+    <path d="M0 -30 C 18 -30 27 -12 27 5 C 27 26 15 38 0 38 C -15 38 -27 26 -27 5 C -27 -12 -18 -30 0 -30 Z" fill="none" stroke="#2a1245" stroke-opacity="0.35" stroke-width="3"/>
+    <path d="M0 -16 C 9 -16 14 -4 14 6 C 14 20 8 28 0 28 C -8 28 -14 20 -14 6 C -14 -4 -9 -16 0 -16 Z" fill="none" stroke="#2a1245" stroke-opacity="0.35" stroke-width="3"/>
+    <!-- sprout -->
+    <path d="M0 -44 C 2 -56 10 -60 16 -62 C 12 -54 10 -48 2 -46 Z" fill="#8ef0c0"/>
+    <path d="M0 -44 C -2 -56 -10 -60 -16 -62 C -12 -54 -10 -48 -2 -46 Z" fill="#6fe0ab"/>
+  </g>
+
+  <!-- scout crosshair / scope ring overlapping the bulb -->
+  <g transform="translate(118 118)" stroke="#8ef0c0" stroke-width="5" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="0" r="22"/>
+    <line x1="20" y1="20" x2="40" y2="40"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="178" y="86" font-family="'Segoe UI', Arial, sans-serif" font-size="46" font-weight="700" fill="url(#word)">Onion<tspan fill="#8ef0c0">Scout</tspan></text>
+  <text x="180" y="116" font-family="'Segoe UI', Arial, sans-serif" font-size="16" letter-spacing="3" fill="#9a86c0">TOR · DARK-WEB · OSINT</text>
+</svg>

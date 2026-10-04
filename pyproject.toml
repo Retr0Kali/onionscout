@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onionscout"
+version = "0.2.0"
+description = "Advanced Tor / dark-web OSINT toolkit for threat intelligence and security research"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "OnionScout contributors" }]
+keywords = ["tor", "osint", "dark-web", "threat-intelligence", "security", "onion"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Security",
+]
+dependencies = [
+    "requests[socks]>=2.31",
+    "beautifulsoup4>=4.12",
+    "stem>=1.8",
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+llm = ["openai>=1.30", "anthropic>=0.30", "google-generativeai>=0.7"]
+dev = ["pytest>=8.0", "pytest-mock>=3.12", "ruff>=0.5"]
+
+[project.scripts]
+onionscout = "onionscout.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourname/onionscout"
+Issues = "https://github.com/yourname/onionscout/issues"
+
+[tool.setuptools.packages.find]
+include = ["onionscout*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# Broad `except Exception` is deliberate in the fetch/search/analyze paths:
+# one dead engine, parser, or LLM provider must not abort the whole run.
+ignore = ["BLE001"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test fixtures contain long literal IOCs (wallet addresses) that can't wrap.
+"tests/*" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

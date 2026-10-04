@@ -1,0 +1,10 @@
+requests[socks]>=2.31
+beautifulsoup4>=4.12
+stem>=1.8
+python-dotenv>=1.0
+rich>=13.7
+
+# Optional LLM providers (install with: pip install -e ".[llm]")
+# openai>=1.30
+# anthropic>=0.30
+# google-generativeai>=0.7
