@@ -65,7 +65,7 @@ links.
 ## 📦 Install
 
 ```bash
-git clone https://github.com/yourname/onionscout.git
+git clone https://github.com/Retr0Kali/onionscout.git
 cd onionscout
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .            # core

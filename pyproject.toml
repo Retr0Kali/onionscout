@@ -35,8 +35,8 @@ dev = ["pytest>=8.0", "pytest-mock>=3.12", "ruff>=0.5"]
 onionscout = "onionscout.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/yourname/onionscout"
-Issues = "https://github.com/yourname/onionscout/issues"
+Homepage = "https://github.com/Retr0Kali/onionscout"
+Issues = "https://github.com/Retr0Kali/onionscout/issues"
 
 [tool.setuptools.packages.find]
 include = ["onionscout*"]
